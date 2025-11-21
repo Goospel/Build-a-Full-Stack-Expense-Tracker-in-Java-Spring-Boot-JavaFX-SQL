@@ -21,6 +21,10 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
+application {
+    mainClass = 'me.goospel.Main'
+}
+
 test {
     useJUnitPlatform()
 }
