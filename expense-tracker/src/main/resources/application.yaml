@@ -4,5 +4,5 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/expense_tracker_db
-    user: root
+    username: root
     password: 3954gold
