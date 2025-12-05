@@ -18,4 +18,11 @@ public class UserService {
         log.info("Getting the user by id: {}", userId);
         return userRepository.findById(userId);
     }
+
+    public Optional<User> getUserByEmail(String email) {
+        log.info("Getting the user by email: {}", email);
+        return userRepository.findByEmail(email);
+    }
+
+
 }
