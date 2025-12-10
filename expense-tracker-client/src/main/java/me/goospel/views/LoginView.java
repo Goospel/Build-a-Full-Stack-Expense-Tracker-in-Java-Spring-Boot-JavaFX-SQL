@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import me.goospel.controllers.LoginController;
 import me.goospel.utils.Utilitie;
 import me.goospel.utils.ViewNavigator;
 
@@ -20,6 +21,8 @@ public class LoginView {
     public void show() {
         Scene scene = createScene();
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
+        new LoginController(this);
         ViewNavigator.switchViews(scene);
     }
 
@@ -53,5 +56,45 @@ public class LoginView {
 
         loginFormBox.getChildren().addAll(usernameField, passwordField, loginButton, signupLabel);
         return loginFormBox;
+    }
+
+    public Label getExpenseTrackerLabel() {
+        return expenseTrackerLabel;
+    }
+
+    public void setExpenseTrackerLabel(Label expenseTrackerLabel) {
+        this.expenseTrackerLabel = expenseTrackerLabel;
+    }
+
+    public TextField getUsernameField() {
+        return usernameField;
+    }
+
+    public void setUsernameField(TextField usernameField) {
+        this.usernameField = usernameField;
+    }
+
+    public PasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public void setPasswordField(PasswordField passwordField) {
+        this.passwordField = passwordField;
+    }
+
+    public Button getLoginButton() {
+        return loginButton;
+    }
+
+    public void setLoginButton(Button loginButton) {
+        this.loginButton = loginButton;
+    }
+
+    public Label getSignupLabel() {
+        return signupLabel;
+    }
+
+    public void setSignupLabel(Label signupLabel) {
+        this.signupLabel = signupLabel;
     }
 }
